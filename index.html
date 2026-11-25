@@ -104,9 +104,17 @@
     .story-art::after { width: 52%; height: 42%; transform: rotate(20deg); }
     .story-flower { position: relative; z-index: 1; color: #b87a7c; font-size: 7.5rem; text-shadow: 0 5px 0 rgba(255,255,255,.3); }
     .story-copy p { max-width: 560px; color: var(--soft-ink); }
-    .contact-card { padding: 2.5rem; border-radius: 34px; background: #f7e5d5; text-align: center; }
-    .contact-card p { max-width: 550px; margin: 1rem auto 1.3rem; color: var(--soft-ink); }
-    .footer { padding: 2.3rem 2rem 1.2rem; color: #fff8ed; background: #81676a; }
+    .contact-layout { display: grid; grid-template-columns: 1.15fr .85fr; gap: 2rem; align-items: center; padding: 2.5rem; border-radius: 38px; background: linear-gradient(135deg, #f7e5d5, #f4eaf4); }
+    .contact-copy > p { max-width: 570px; margin: 1rem 0 1.3rem; color: var(--soft-ink); }
+    .contact-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
+    .contact-link { display: flex; align-items: center; gap: .7rem; min-width: 0; padding: .85rem; border: 1px solid rgba(255,255,255,.85); border-radius: 21px; background: rgba(255,253,249,.8); text-decoration: none; }
+    .contact-link:hover { background: white; }
+    .contact-icon { display: grid; place-items: center; flex: 0 0 38px; width: 38px; height: 38px; border-radius: 50%; color: #8a6265; background: #f7d9d2; font-size: 1.2rem; }
+    .contact-link small, .instagram-card small { display: block; color: var(--soft-ink); font-size: .68rem; }
+    .contact-link strong { display: block; overflow-wrap: anywhere; color: var(--ink); font-size: .78rem; }
+    .instagram-card { display: flex; align-items: center; gap: 1rem; justify-content: center; padding: 1rem; border: 1px solid rgba(255,255,255,.9); border-radius: 28px; background: rgba(255,253,249,.8); text-decoration: none; box-shadow: 0 10px 25px rgba(115,77,62,.06); }
+    .instagram-card img { display: block; width: 145px; height: auto; border-radius: 18px; }
+    .instagram-card strong { display: block; margin-top: .25rem; color: #ac666e; font-size: .9rem; }    .footer { padding: 2.3rem 2rem 1.2rem; color: #fff8ed; background: #81676a; }
     .footer-inner { max-width: 1180px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
     .footer .brand-name small { color: #f4dfd5; }
     .footer .brand-mark { color: #81676a; background: #f5df9f; }
@@ -137,7 +145,7 @@
       .story-grid { grid-template-columns: 1fr; gap: 1.7rem; }
       .story-art { min-height: 250px; }
       .story-flower { font-size: 6rem; }
-      .contact-card { padding: 1.8rem 1.2rem; }
+      .contact-layout { grid-template-columns: 1fr; padding: 1.5rem; border-radius: 30px; } .instagram-card { justify-content: flex-start; }
       .footer-inner { align-items: flex-start; flex-direction: column; }
     }
     @media (max-width: 430px) { .product-grid { gap: .65rem; } .product-card { padding: .42rem; border-radius: 22px; } .product-photo { height: 175px; border-radius: 17px; } .product-info { padding: .7rem .4rem .55rem; } .product-title { font-size: .98rem; } .product-note { font-size: .7rem; } .baby-list { gap: .5rem; } .baby-chip { min-height: 65px; padding: .55rem; font-size: .72rem; } .baby-chip span { flex-basis: 30px; width: 30px; height: 30px; } }
@@ -195,7 +203,7 @@
     <section class="section" id="story">
       <div class="section-inner story-grid"><div class="story-art" aria-hidden="true"><span class="story-flower">✿</span></div><div class="story-copy"><div class="eyebrow">A note from Chandu</div><h2>One loop at a time.</h2><p>Crochet by Chandu is a small handmade business built around the joy of making. Each piece starts with yarn, a hook, and a little imagination—then grows one loop at a time.</p><p>Thank you for supporting handmade work and the care that goes into every stitch.</p><a class="button soft" href="#collection">See the little collection&nbsp; ↗</a></div></div>
     </section>
-    <section class="section" id="contact"><div class="section-inner contact-card"><div class="eyebrow">Your next favourite could be handmade</div><h2>Let’s make something lovely.</h2><p>Want a piece from the collection or have a custom idea? Get in touch with Chandu to ask about colours, availability, and what’s possible.</p><a class="button" href="#custom">Talk about a custom piece&nbsp; ♡</a></div></section>
+    <section class="section" id="contact"><div class="section-inner contact-layout"><div class="contact-copy"><div class="eyebrow">Your next favourite could be handmade</div><h2>Say hello to Chandu.</h2><p>Ask about a ready-made piece, colours, availability, or a custom idea. Chandu will let you know what is feasible before confirming a custom order.</p><div class="contact-links"><a class="contact-link" href="mailto:chanduuu1626@gmail.com"><span class="contact-icon">✉</span><span><small>Email</small><strong>chanduuu1626@gmail.com</strong></span></a><a class="contact-link" href="tel:8073416466"><span class="contact-icon">☎</span><span><small>Main phone</small><strong>80734 16466</strong></span></a><a class="contact-link" href="tel:9731132404"><span class="contact-icon">☎</span><span><small>Backup phone</small><strong>97311 32404</strong></span></a></div></div><a class="instagram-card" href="https://www.instagram.com/crochet_by_chandu/" target="_blank" rel="noopener noreferrer"><img src="images/instagram-qr.jpg" alt="Scan this QR code to find Crochet by Chandu on Instagram" loading="lazy"><span><small>Follow along on Instagram</small><strong>@crochet_by_chandu&nbsp; ↗</strong></span></a></div></section>
   </main>
   <footer class="footer"><div class="footer-inner"><a class="brand" href="#home"><span class="brand-mark">CC</span><span class="brand-name">Crochet by Chandu<small>Little loops, lots of love</small></span></a><nav class="footer-links" aria-label="Footer navigation"><a href="#collection">Collection</a><a href="#custom">Custom ideas</a><a href="#story">Our story</a><a href="#contact">Contact</a></nav></div><div class="copyright">© <span id="year"></span> Crochet by Chandu · Handmade slowly, with love.</div></footer>
   <script>
