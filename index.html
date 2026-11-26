@@ -29,6 +29,11 @@
     a { color: inherit; }
     button { font: inherit; }
     .announcement { padding: .58rem 1rem; text-align: center; color: #6d514b; background: var(--butter); font-size: .76rem; letter-spacing: .08em; }
+    .order-invite { display: flex; align-items: center; justify-content: center; gap: 1rem 1.4rem; flex-wrap: wrap; padding: .85rem 1.2rem; color: #6c514c; background: linear-gradient(90deg, #f9e6df, #f2e8f5, #f8edce); text-align: center; }
+    .order-invite strong, .order-invite span { display: block; }
+    .order-invite strong { font-size: .95rem; }
+    .order-invite span { color: var(--soft-ink); font-size: .78rem; }
+    .order-invite a { padding: .57rem 1rem; border-radius: 999px; color: white; background: #be7b78; text-decoration: none; font-size: .78rem; font-weight: 800; }
     .site-header { position: sticky; top: 0; z-index: 10; background: rgba(255, 248, 237, .92); backdrop-filter: blur(12px); }
     .nav { max-width: 1180px; min-height: 82px; margin: auto; padding: .8rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
     .brand { display: inline-flex; gap: .72rem; align-items: center; text-decoration: none; }
@@ -104,7 +109,7 @@
     .story-art::after { width: 52%; height: 42%; transform: rotate(20deg); }
     .story-flower { position: relative; z-index: 1; color: #b87a7c; font-size: 7.5rem; text-shadow: 0 5px 0 rgba(255,255,255,.3); }
     .story-copy p { max-width: 560px; color: var(--soft-ink); }
-    .contact-layout { display: grid; grid-template-columns: 1.15fr .85fr; gap: 2rem; align-items: center; padding: 2.5rem; border-radius: 38px; background: linear-gradient(135deg, #f7e5d5, #f4eaf4); }
+    .contact-layout { display: grid; grid-template-columns: 1.15fr .85fr; gap: 2rem; align-items: center; margin-top: 3rem; padding: 2.5rem; border-radius: 38px; background: linear-gradient(135deg, #f7e5d5, #f4eaf4); scroll-margin-top: 105px; }
     .contact-copy > p { max-width: 570px; margin: 1rem 0 1.3rem; color: var(--soft-ink); }
     .contact-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
     .contact-link { display: flex; align-items: center; gap: .7rem; min-width: 0; padding: .85rem; border: 1px solid rgba(255,255,255,.85); border-radius: 21px; background: rgba(255,253,249,.8); text-decoration: none; }
@@ -114,6 +119,10 @@
     .contact-link strong { display: block; overflow-wrap: anywhere; color: var(--ink); font-size: .78rem; }
     .instagram-card { display: flex; align-items: center; gap: 1rem; justify-content: center; padding: 1rem; border: 1px solid rgba(255,255,255,.9); border-radius: 28px; background: rgba(255,253,249,.8); text-decoration: none; box-shadow: 0 10px 25px rgba(115,77,62,.06); }
     .instagram-card img { display: block; width: 145px; height: auto; border-radius: 18px; }
+    .tally-form { max-width: 900px; margin: 2rem auto 0; padding: .45rem; overflow: hidden; border: 1px solid rgba(255,255,255,.9); border-radius: 28px; background: var(--paper); box-shadow: var(--shadow); }
+    .tally-form iframe { display: block; width: 100%; min-height: 1422px; border: 0; }
+    .request-heading { max-width: 780px; margin: 0 auto 1.4rem; text-align: center; }
+    .request-heading p { margin: .8rem auto 0; color: var(--soft-ink); }
     .instagram-card strong { display: block; margin-top: .25rem; color: #ac666e; font-size: .9rem; }    .footer { padding: 2.3rem 2rem 1.2rem; color: #fff8ed; background: #81676a; }
     .footer-inner { max-width: 1180px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
     .footer .brand-name small { color: #f4dfd5; }
@@ -157,9 +166,10 @@
     <div class="nav">
       <a class="brand" href="#home" aria-label="Crochet by Chandu home"><span class="brand-mark">CC</span><span class="brand-name">Crochet by Chandu<small>Little loops, lots of love</small></span></a>
       <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-      <nav class="nav-links" aria-label="Main navigation"><a href="#collection">Shop the makes</a><a href="#custom">Custom ideas</a><a href="#story">Our story</a><a class="nav-button" href="#contact">Say hello&nbsp; ♡</a></nav>
+      <nav class="nav-links" aria-label="Main navigation"><a href="#collection">Shop the makes</a><a href="#custom">Custom ideas</a><a href="#story">Our story</a><a href="#contact-details">Say hello</a><a class="nav-button" href="#contact">Make a request&nbsp; ♡</a></nav>
     </div>
   </header>
+  <section class="order-invite" aria-label="Start a crochet order"><div><strong>Become part of our Crochet family ♡</strong><span>Found a favourite or have a custom idea? Let’s make something lovely.</span></div><a href="#contact">Start your request&nbsp; ↓</a></section>
   <main>
     <section class="hero" id="home">
       <div class="hero-inner">
@@ -167,7 +177,7 @@
           <div class="eyebrow">A tiny handmade corner</div>
           <h1>Soft things.<br><span>Happy little</span><br>moments.</h1>
           <p>From colourful hair accessories to tiny keepsakes and cosy baby knits, every piece is crocheted by Chandu with care.</p>
-          <div class="hero-actions"><a class="button" href="#collection">Browse the makes <span aria-hidden="true">♡</span></a><a class="button soft" href="#custom">Dream up a custom piece</a></div>
+          <div class="hero-actions"><a class="button" href="#collection">Browse the makes <span aria-hidden="true">♡</span></a><a class="button soft" href="#contact">Dream up a custom piece</a></div>
           <p class="hero-note">Have an idea? Chandu will check what’s possible before confirming.</p>
         </div>
         <div class="hero-art" aria-label="A cheerful collage of handmade crochet pieces">
@@ -203,7 +213,7 @@
     <section class="section" id="story">
       <div class="section-inner story-grid"><div class="story-art" aria-hidden="true"><span class="story-flower">✿</span></div><div class="story-copy"><div class="eyebrow">A note from Chandu</div><h2>One loop at a time.</h2><p>Crochet by Chandu is a small handmade business built around the joy of making. Each piece starts with yarn, a hook, and a little imagination—then grows one loop at a time.</p><p>Thank you for supporting handmade work and the care that goes into every stitch.</p><a class="button soft" href="#collection">See the little collection&nbsp; ↗</a></div></div>
     </section>
-    <section class="section" id="contact"><div class="section-inner contact-layout"><div class="contact-copy"><div class="eyebrow">Your next favourite could be handmade</div><h2>Say hello to Chandu.</h2><p>Ask about a ready-made piece, colours, availability, or a custom idea. Chandu will let you know what is feasible before confirming a custom order.</p><div class="contact-links"><a class="contact-link" href="mailto:chanduuu1626@gmail.com"><span class="contact-icon">✉</span><span><small>Email</small><strong>chanduuu1626@gmail.com</strong></span></a><a class="contact-link" href="tel:8073416466"><span class="contact-icon">☎</span><span><small>Main phone</small><strong>80734 16466</strong></span></a><a class="contact-link" href="tel:9731132404"><span class="contact-icon">☎</span><span><small>Backup phone</small><strong>97311 32404</strong></span></a></div></div><a class="instagram-card" href="https://www.instagram.com/crochet_by_chandu/" target="_blank" rel="noopener noreferrer"><img src="images/instagram-qr.jpg" alt="Scan this QR code to find Crochet by Chandu on Instagram" loading="lazy"><span><small>Follow along on Instagram</small><strong>@crochet_by_chandu&nbsp; ↗</strong></span></a></div></section>
+    <section class="section" id="contact"><div class="section-inner"><div class="request-heading"><div class="eyebrow">Ready to make it yours?</div><h2>Let’s start with your idea.</h2><p>Tell Chandu what you’re looking for. You can ask about a favourite from the collection or share a custom idea, and Chandu will confirm what’s possible.</p></div><div class="tally-form"><iframe data-tally-src="https://tally.so/embed/aO28qX?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy" width="100%" height="1422" frameborder="0" marginheight="0" marginwidth="0" title="Crochet by Chandu Product &amp; Custom Request"></iframe><script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){if(typeof Tally!=="undefined"){Tally.loadEmbeds()}else{d.querySelectorAll('iframe[data-tally-src]:not([src])').forEach(function(e){e.src=e.dataset.tallySrc})}};if(typeof Tally!=="undefined"){v()}else if(d.querySelector('script[src="'+w+'"]')===null){var s=d.createElement("script");s.src=w;s.onload=v;s.onerror=v;d.body.appendChild(s)}</script></div><div class="contact-layout" id="contact-details"><div class="contact-copy"><div class="eyebrow">Questions, ideas, or just a hello</div><h2>Say hello to Chandu.</h2><p>For a quick question, an order update, or a little hello, reach out here—or follow along on Instagram.</p><div class="contact-links"><a class="contact-link" href="mailto:chanduuu1626@gmail.com"><span class="contact-icon">✉</span><span><small>Email</small><strong>chanduuu1626@gmail.com</strong></span></a><a class="contact-link" href="tel:8073416466"><span class="contact-icon">☎</span><span><small>Main phone</small><strong>80734 16466</strong></span></a><a class="contact-link" href="tel:9731132404"><span class="contact-icon">☎</span><span><small>Backup phone</small><strong>97311 32404</strong></span></a></div></div><a class="instagram-card" href="https://www.instagram.com/crochet_by_chandu/" target="_blank" rel="noopener noreferrer"><img src="images/instagram-qr.jpg" alt="Scan this QR code to find Crochet by Chandu on Instagram" loading="lazy"><span><small>Follow along on Instagram</small><strong>@crochet_by_chandu&nbsp; ↗</strong></span></a></div></div></section>
   </main>
   <footer class="footer"><div class="footer-inner"><a class="brand" href="#home"><span class="brand-mark">CC</span><span class="brand-name">Crochet by Chandu<small>Little loops, lots of love</small></span></a><nav class="footer-links" aria-label="Footer navigation"><a href="#collection">Collection</a><a href="#custom">Custom ideas</a><a href="#story">Our story</a><a href="#contact">Contact</a></nav></div><div class="copyright">© <span id="year"></span> Crochet by Chandu · Handmade slowly, with love.</div></footer>
   <script>
